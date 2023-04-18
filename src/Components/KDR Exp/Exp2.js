@@ -5,12 +5,15 @@ import Aritculated from "../Articulated.webp"
 export default function Exp2(props) {
   return (
     <div>
-        <h1 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Experiment-2</strong></h1>
+        <div className='container my-lg-5'>
+            <h1 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Experiment-2</strong></h1>
+        </div>
         <h2 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Title: DEMONSTRATION OF ARTICULATED/SCARA ROBOT</strong> </h2>
+        <div className='container my-4'/>
         <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Aim: To study different robot configurations.</strong></h3>
         <div className='container my-5'/>
         <h4 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}><strong>Introduction</strong></h4>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}><h5><strong>Industrial Robots DeFinition:</strong></h5>
+        <p className={`text-${props.mode==="dark"?"light":"dark"}`}><h5><strong>Industrial Robots Definition:</strong></h5>
               A robot is a programmable arm simulator.
               “A robot is a re-programmable, multifunction manipulator designed to move material,
               parts, tools, or special devices through variable programmed motions for the
@@ -25,6 +28,9 @@ export default function Exp2(props) {
               configuration.
               A robot with at least 3 rotary joints.</p>
               <img src={Aritculated} className={`d-block w-250 mx-auto`} height="250px" alt="..." />
+        <div className={`card-body align="center"`}>
+            <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Articulated co-ordinate robot</p>
+        </div>
         <h5 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}>Commonly used for:</h5>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
             <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Material handling</li>
@@ -53,6 +59,9 @@ export default function Exp2(props) {
             suitable for assembly operation and is therefore extensively used in several
             industries for this purpose. A robot with at least 2 parallel rotary joints.</p>
             <img src={SCARA} className={`d-block w-350px mx-auto`}  height={`300px`} alt='...'/>
+        <div className={`card-body align="center"`}>
+            <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: SCARA co-ordinate robot</p>
+        </div>
 
         <h5 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}>Commonly used for:</h5>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>

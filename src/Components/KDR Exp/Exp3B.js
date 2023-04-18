@@ -24,14 +24,15 @@ export default function Exp3b(props) {
                 written in C/C++, Python, Java, Lua, Matlab or Octave. Following are just a few of
                 CoppeliaSim's applications:</p>
             <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Simulation of factory automation systems</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Remote monitoring</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Hardware control</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Fast prototyping and verification</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Safety monitoring</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Fast algorithm development</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Robotics related education</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Product presentation</li>
+                <ul>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Simulation of factory automation systems</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Remote monitoring</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Hardware control</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Fast prototyping and verification</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Safety monitoring</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Fast algorithm development</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Robotics related education</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Product presentation</li></ul>
             </p>
             <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
             <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
@@ -70,16 +71,18 @@ export default function Exp3b(props) {
                 <div className='continer my-5' />
                 <h5><strong className={`text-${props.mode==="dark"?"light":"dark"}`}>Procedure</strong></h5>
                 <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                    <ul><li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                    </ul>
+
                 </p>
                 <div className={`youtube tutorial my-4`}>
                     <iframe width="100%" height="650px" src="https://www.youtube.com/embed/YcfARpQVKhU"

@@ -7,8 +7,11 @@ import Polar from "../Polar.png"
 export default function Exp1(props) {
   return (
     <div>
+        <div className='container my-lg-5'>
         <h1 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Experiment-1</strong></h1>
+        </div>
         <h2 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Title: DEMONSTRATION OF CARTESIAN/CYLINDRICAL/SPHERICAL ROBOT</strong> </h2>
+        <div className={`my-4`} />
         <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Aim: To study basic robot co-ordinate configurations.</strong></h3>
         <div className='container my-5'/>
         <h4 className={` text-${props.mode==="dark"?"light":"dark"}`}><strong>Introduction</strong></h4>
@@ -32,6 +35,9 @@ export default function Exp1(props) {
               Gantry robots are Cartesian robots (LLL). A robot with 3 prismatic joints – the axes
               consistent with a Cartesian coordinate system.</p>
               <img src={Cartesian} className={`d-block w-250 mx-auto`} width="250px" height="250px" alt="..." />
+        <div className={`card-body align="center"`}>
+            <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Cartesian  co-ordinate robot</p>
+        </div>
         <h5 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}>Commonly used for</h5>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
             <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Pick and place work</li>
@@ -66,6 +72,9 @@ export default function Exp1(props) {
             (L) joints succeeded to connect the links. A robot with 2 prismatic joints and a rotary
             joint – the axes consistent with a cylindrical coordinate system</p>
             <img src={Cylindrical} className={`d-block w-250 mx-auto`} height="250px"  alt="..." />
+        <div className={`card-body align="center"`}>
+            <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Cylindrical co-ordinate robot</p>
+        </div>
         <h5 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}>Commonly used for:</h5>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
             <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Robotic coating and finishing applications</li>
@@ -100,6 +109,9 @@ export default function Exp1(props) {
               with 1 prismatic joint and 2 rotary joints – the axes consistent with a polar coordinate
               system.</p>
             <img src={Polar} className={`d-block w-250 mx-auto`} height="250px" alt="..." />
+        <div className={`card-body align="center"`}>
+            <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Spherical co-ordinate robot</p>
+        </div>
         <h5 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}>Commonly used or</h5>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
             <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Arc/spot welding</li>

@@ -36,6 +36,7 @@ export default function Exp3a(props) {
                 written in C/C++, Python, Java, Lua, Matlab or Octave. Following are just a few of
                 CoppeliaSim's applications:</p>
             <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
+                <ul>
                 <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Simulation of factory automation systems</li>
                 <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Remote monitoring</li>
                 <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Hardware control</li>
@@ -43,7 +44,7 @@ export default function Exp3a(props) {
                 <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Safety monitoring</li>
                 <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Fast algorithm development</li>
                 <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Robotics related education</li>
-                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Product presentation</li>
+                <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Product presentation</li></ul>
             </p>
             <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
             <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
@@ -75,6 +76,7 @@ export default function Exp3a(props) {
                 <div className='container my-5' />
                 <h5><strong className={`text-${props.mode==="dark"?"light":"dark"}`}>Procedure</strong></h5>
                 <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
+                    <ul>
                     <li className={`text-${props.mode==="dark"?"light":"dark"}`}>We will start by making the chassis first by adding a cuboid and providing the
                         dimensions as per our requirement and we will position it such that it is little above
                         the ground just like the ground clearance of any car.</li>
@@ -104,6 +106,7 @@ export default function Exp3a(props) {
                         and define all the parameters for it.</li>
                     <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Finally we will draw the path of the car using the proper function in the script and
                         defining all the parameters for it.</li>
+                    </ul>
                 </p>
 
                 <div className={`youtube tutorial my-4`}>

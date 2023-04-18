@@ -1,6 +1,6 @@
 import React from 'react'
-import add from '../perDTS.png';
-import diff from '../casDTS.png';
+// import add from '../perDTS.png';
+// import diff from '../casDTS.png';
 
 
 function Exp1C(props) {
@@ -9,26 +9,26 @@ function Exp1C(props) {
       <h2 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Experiment-1C</strong></h2>
       <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Generation of continous(CTS) and discrete(DTS) time signal </strong></h3>
         <div className="container my-6">
-            <div id="carouselExample" className="carousel slide">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={add} className={`d-block`} height={`500px`}  align={`center`} alt="IMG_1438"/>
-                    </div>
-                    <div className="carousel-item">
-                        <img src={diff} className={`d-block w-100% mx-auto`} height={`500px`} align={`center`} alt="ss"/>
-                    </div>
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
+            {/*<div id="carouselExample" className="carousel slide">*/}
+            {/*    <div className="carousel-inner">*/}
+            {/*        <div className="carousel-item active">*/}
+            {/*            <img src={add} className={`d-block mx-auto`} height={`500px`}  align={`center`} alt="IMG_1438"/>*/}
+            {/*        </div>*/}
+            {/*        <div className="carousel-item">*/}
+            {/*            <img src={diff} className={`d-block  mx-auto`} height={`500px`} align={`center`} alt="ss"/>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample"*/}
+            {/*            data-bs-slide="prev">*/}
+            {/*        <span className="carousel-control-prev-icon" aria-hidden="true"></span>*/}
+            {/*        <span className="visually-hidden">Previous</span>*/}
+            {/*    </button>*/}
+            {/*    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample"*/}
+            {/*            data-bs-slide="next">*/}
+            {/*        <span className="carousel-control-next-icon" aria-hidden="true"></span>*/}
+            {/*        <span className="visually-hidden">Next</span>*/}
+            {/*    </button>*/}
+            {/*</div>*/}
 
 
         <div className='container my-4'/>

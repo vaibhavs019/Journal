@@ -1,7 +1,9 @@
 import React from 'react'
 import rc from "../RC.png";
 import rl from "../RL.png";
-
+import lc from "../lc.png";
+import rlc from "../rlc.png";
+import { MathComponent } from "mathjax-react";
 function Exp3A(props) {
   return (
       <>
@@ -14,15 +16,16 @@ function Exp3A(props) {
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>V is directly proportional to I, </p>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>V = I * R</p>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>where,
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>V is the potential difference measured across the conductor (in volts)</li>
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>I is the current through the conductor (in amperes)</li>
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>R is the constant of proportionality called resistance (in ohms)</li>
+          <aside className={`text-${props.mode==="dark"?"light":"dark"}`}>V is the potential difference measured across the conductor (in volts)</aside>
+          <aside className={`text-${props.mode==="dark"?"light":"dark"}`}>I is the current through the conductor (in amperes)</aside>
+          <aside className={`text-${props.mode==="dark"?"light":"dark"}`}>R is the constant of proportionality called resistance (in ohms)</aside>
           </p>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Factors Affecting Electrical Resistance</p>
+        <ul>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The cross-sectional area of the conductor</li>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Length of the conductor</li>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The material of the conductor</li>
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The temperature of the conducting material</li>
+          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The temperature of the conducting material</li></ul>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
 
         <div className={`my-4`}/>
@@ -32,10 +35,11 @@ function Exp3A(props) {
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
 
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Factors Affecting Electrical Resistance</p>
+        <ul>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Number of Wire Turns in the Coil</li>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Coil Area</li>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Core material</li>
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Coil length</li>
+          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Coil length</li></ul>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
 
         <div className={`my-4`}/>
@@ -45,14 +49,15 @@ function Exp3A(props) {
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Q is directly proportional to V</p>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Q = C * V</p>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>where,
-            <li className={`text-${props.mode==="dark"?"light":"dark"}`}>V is the potential difference</li>
-            <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Q is the electric field around the capacitor</li>
-            <li className={`text-${props.mode==="dark"?"light":"dark"}`}>C is the constant of proportionality called as Capacitance</li>
+            <aside className={`text-${props.mode==="dark"?"light":"dark"}`}>V is the potential difference</aside>
+            <aside className={`text-${props.mode==="dark"?"light":"dark"}`}>Q is the electric field around the capacitor</aside>
+            <aside className={`text-${props.mode==="dark"?"light":"dark"}`}>C is the constant of proportionality called as Capacitance</aside>
           </p>
           <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Factors Affecting Electrical Resistance</p>
+        <ul>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The effect of dielectric on capacitance is that the greater the permittivity of the dielectric, the greater the capacitance, likewise lesser the permittivity of the dielectric the lesser is the capacitance. Some materials offer less opposition to the field flux for a given amount of field force. Materials with greater permittivity allow more field flux. Hence greater charge is collected.</li>
           <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The effect of spacing on the capacitance is that it is inversely proportional to the distance between the plates.</li>
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The effect of the area of the plate is that the capacitance is directly proportional to the area. The larger the plate area, the more the capacitance value.</li>
+          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>The effect of the area of the plate is that the capacitance is directly proportional to the area. The larger the plate area, the more the capacitance value.</li></ul>
      </div>
 
         <div className={`my-5`} />
@@ -60,6 +65,11 @@ function Exp3A(props) {
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>An RLC circuit is an electrical circuit consisting of a resistor (R), an inductor (L), and a capacitor (C), connected together in series or in parallel. The RLC circuit is a type of filter circuit that can be used to either filter out certain frequencies or to resonate at a particular frequency.</p>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>When an RLC circuit is excited by a voltage source, the circuit's behavior depends on the frequency of the input signal. At low frequencies, the inductor dominates and the circuit behaves like a high-pass filter, allowing high-frequency signals to pass through while attenuating low-frequency signals. At high frequencies, the capacitor dominates and the circuit behaves like a low-pass filter, allowing low-frequency signals to pass through while attenuating high-frequency signals.</p>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>At a certain frequency, known as the resonant frequency, the impedance of the RLC circuit is minimized, resulting in a peak in the circuit's response. This phenomenon is known as resonance, and it can be used in applications such as radio tuning circuits and in electrical power transmission systems.</p>
+          <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Transfer function for the RLC circuit:<MathComponent tex={String.raw ` TF =   \frac{1}{LCs^2 + (RC + \frac{1}{L})s + 1}`} /></p>
+          <img src={rlc} className={`d-block mx-auto `} width={`550px`} height={`300px`} align={`center`} alt="..."/>
+          <div className={`card-body align="center"`}>
+              <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: RL circuit using Simulink</p>
+
        <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>RC circuit</h4>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>A resistor-capacitor circuit (RC CIrcuit) is an electrical circuit consisting of passive components like resistors and capacitors, driven by the current source or the voltage source.
 
@@ -67,7 +77,7 @@ function Exp3A(props) {
 
           The charging and the discharging of the capacitor is not an instant process but takes some time. If the resistor and capacitor are connected in series, the capacitor charges gradually through the resistor, until the voltage across the resistor is equal to the supply voltage.</p>
 
-
+          <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Transfer function for the RS circuit:<MathComponent tex={String.raw ` TF =   \frac{1}{RCs + 1}`} /></p>
         <img src={rc} className={`d-block mx-auto`} width="450px" height="300px" alt="..."/>
         <div className={`card-body align="center"`}>
           <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: RC circuit using Simulink</p>
@@ -75,11 +85,23 @@ function Exp3A(props) {
 
         <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>RL circuit</h4>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}>RL Circuits (resistor – inductor circuit) also called RL network or RL filter is a type of circuit having a combination of inductors and resistors and is usually driven by some power source. As such, an RL circuit has the inductor and a resistor connected in either parallel or series combination with each other. They are either driven by the current (parallel) or a voltage (series) source.</p>
+          <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Transfer function for the RL circuit:<MathComponent tex={String.raw ` TF =   \frac{1}{\frac{R}{L}s + 1}`} /></p>
         <div className={`my-3`} />
-        <img src={rl} className={`d-block mx-auto`} width={`450px`} height={`300px`} align={`center`} alt="..."/>
+        <img src={rl} className={`d-block mx-auto `} width={`450px`} height={`300px`} align={`center`} alt="..."/>
         <div className={`card-body align="center"`}>
           <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: RL circuit using Simulink</p>
         </div>
+
+              <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>LC circuit</h4>
+              <p className={`text-${props.mode==="dark"?"light":"dark"}`}>An LC circuit is also called a tank circuit, a tuned circuit or resonant circuit is an electric circuit built with a capacitor denoted by the letter ‘C’ and an inductor denoted by the letter ‘L’ connected together. These circuits are used for producing signals at a particular frequency or accepting a signal from a more composite signal at a particular frequency. LC circuits are basic electronics components in various electronic devices, especially in radio equipment used in circuits like tuners, filters, frequency mixers, and oscillators. The main function of an LC circuit is generally to oscillate with minimum damping.</p>
+              <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Transfer function for the LC circuit:<MathComponent tex={String.raw ` TF =   \frac{1}{LCs^2 + 1}`} /></p>
+              <div className={`my-3`} />
+              <img src={lc} className={`d-block mx-auto `} width={`450px`} height={`300px`} align={`center`} alt="..."/>
+              <div className={`card-body align="center"`}>
+                  <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: LC circuit</p>
+              </div>
+
+          </div>
       </>
   )
 }

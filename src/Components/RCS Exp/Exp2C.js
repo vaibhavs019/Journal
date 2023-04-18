@@ -1,10 +1,10 @@
 import React from 'react'
+import { MathComponent } from "mathjax-react";
 
-function Exp2C(props) {
+function Exp2C() {
   return (
     <div>
-      <h2 className={`text-${props.mode==="dark"?"light":"dark"}`}>Experiment-2C</h2>
-      <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}>State space analysis oF signal using simulation sotware</h3>
+       <MathComponent tex={String.raw`\int_0^1 x^2\ dx`} />;
     </div>
   )
 }

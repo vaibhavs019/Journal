@@ -1,4 +1,6 @@
 import React from 'react'
+import {MathComponent} from "mathjax-react";
+import bodeplot from "../bodeplot.png";
 
 function Exp4B(props) {
   return (
@@ -8,81 +10,50 @@ function Exp4B(props) {
       <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}>Bode Plot analysis of signal using simulation sotware</h3>
       <div className='container my-5'/>
       <h4 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}><strong>Bode Plot</strong></h4>
-      <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
+      <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Bode Plot is a graphical method used for design and analysis purpose of the control system. In the Bode Plot, a logarithmic scale is used that helps in simplifying the way to graphically represent the frequency response of the system.
 
-
-      <h4 className={`my-2 text-${props.mode==="dark"?"light":"dark"}`}>Procedure to draw root locus</h4>
+        The idea of logarithmic scaling was provided by <strong>Hendrick W. Bode.</strong></p>
+      <p className={`text-${props.mode==="dark"?"light":"dark"}`}>In bode plot, logarithmic of magnitude and logarithmic of phase angle are separately plotted for logarithmic values of frequencies.</p>
+      <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Need for bode plot</h5>
+      <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Previously we have seen that the basic form of frequency response curve represents a plot between magnitude and phase angle is sketched for various values of input frequency i.e., ω. In such plots, there is variation in ω from 0 to ∞ for which various values of magnitude and phase angle are achieved. However, accommodating all the values of magnitude and phase angle on a linear scale is quite difficult.</p>
+      <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Thus, H.W. Bode proposed a different but powerful and helpful method for the purpose of stability analysis of the control system.</p>
+      <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Bode Plot consists of 2 plots:</h5>
       <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Step-1: Locate the open loop poles and zeros in the ‘s’ plane.</h5>
-        <div className={`container my-3`} />
-        {/*<img src={`#`} className={`img-fluid`} alt="..." />*/}
-        <div className={`container my-3`} />
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Step-2: Find the number of root locus branches.</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-          We know that the root locus branches start at the open loop poles and end at open loop zeros. So, the number of root locus branches N is equal to the number of finite open loop poles P or the number of finite open loop zeros Z, whichever is greater.
-          <p>Mathematically, we can write the number of root locus branches N as: </p>
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>N = P,  if P is greater than or equal to Z</li>
-          <li className={`text-${props.mode==="dark"?"light":"dark"}`}>N = Z,  if Z is greater than P</li>
+      <ul>
+        <li>Magnitude plot: <p>
+          In this plot, magnitude is represented in logarithmic values against logarithmic values of frequency.
         </p>
-        {/*<div className={`container my-3`} />*/}
-        {/*<img src={diff} className={`img-fluid`} alt="..." />*/}
-        <div className={`container my-3`} />
+        <p>For the transfer function G(jω)H(jω), in order to express the magnitude in logarithmic values, we need to find,</p>
+        <MathComponent tex={String.raw`G(j\omega) = 20log_{10} G(j\omega) db`}/> </li>
+        <li>Phase angle plot:
+        <p>Here, the phase angle in degrees is sketched against logarithmic values of frequency.</p>
+        <MathComponent tex={String.raw`\phi = \angle G(j\omega) H(j\omega)`}/></li>
+      </ul></p>
 
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Step-3: Identify and draw the real axis root locus branches.</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>If the angle of the open loop transfer function at a point is an odd multiple of 1800, then that point is on the root locus. If odd number of the open loop poles and zeros exist to the left side of a point on the real axis, then that point is on the root locus branch. Therefore, the branch of points which satisfies this condition is the real axis of the root locus branch.</p>
-        {/*<div className={`container my-3`} />*/}
-        {/*<img src={diff} className={`img-fluid`} alt="..." />*/}
-        <div className={`container my-3`} />
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Step-4: Find the centroid and the angle of asymptotes.</h5>
-        <li>Centroid = </li>
-
-        <li></li>
-        <li></li>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
-        {/*<div className={`container my-3`} />*/}
-        {/*<img src={diff} className={`img-fluid`} alt="..." />*/}
-        <div className={`container my-3`} />
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Step-5: Find the intersection points of root locus branches with an imaginary axis.</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-          We can calculate the point at which the root locus branch intersects the imaginary axis and the value of K at that point by using the Routh array method and special case.
-          <li>If all elements of any row of the Routh array are zero, then the root locus branch intersects the imaginary axis and vice-versa.</li>
-          <li>Identify the row in such a way that if we make the first element as zero, then the elements of the entire row are zero. Find the value of K for this combination.</li>
-          <li>Substitute this K value in the auxiliary equation. You will get the intersection point of the root locus branch with an imaginary axis.</li>
-        </p>
-        {/*<div className={`container my-3`} />*/}
-        {/*<img src={diff} className={`img-fluid`} alt="..." />*/}
-        <div className={`container my-3`} />
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Step-6: Find Break-away and Break-in points.</h5>
-        <li>If there exists a real axis root locus branch between two open loop poles, then there will be a break-away point in between these two open loop poles.</li>
-        <li>If there exists a real axis root locus branch between two open loop zeros, then there will be a break-in point in between these two open loop zeros.</li>
-        {/*<div className={`container my-3`} />*/}
-        {/*<img src={diff} className={`img-fluid`} alt="..." />*/}
-        <div className={`container my-3`} />
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Step-7: Find the angle of departure and the angle of arrival.</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>The Angle of departure and the angle of arrival can be calculated at complex conjugate open loop poles and complex conjugate open loop zeros respectively.
-          <div className={`container my-2`} />
-          <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-            The formula for the angle of departure ϕd is
-            <p className={`text-${props.mode==="dark"?"light":"dark"}`}>ϕd = 180 − ϕ</p>
-            The formula for the angle of arrival ϕa is
-            <p> ϕa = 180 − ϕ</p>
-            Where,
-            <p> ϕ = ∑ϕP − ∑ϕZ </p>
-          </p>
-        </p>
-        {/*<div className={`container my-3`} />*/}
-        {/*<img src={diff} className={`img-fluid`} alt="..." />*/}
-        <div className={`container my-3`} />
+      <h4 className={`my-2 text-${props.mode==="dark"?"light":"dark"}`}>Procedure to bode plot</h4>
+      <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
+        <ul>
+          <li>Represent the open loop transfer function in the standard time constant form.</li>
+          <li>Substitute, s=jω in the above equation.</li>
+          <li>Find the corner frequencies and arrange them in ascending order.</li>
+          <li>Consider the starting frequency of the Bode plot as 1/10th of the minimum corner frequency or 0.1 rad/sec whichever is smaller value and draw the Bode plot upto 10 times maximum corner frequency.</li>
+          <li>Draw the magnitude plots for each term and combine these plots properly.</li>
+          <li>Draw the phase plots for each term and combine these plots properly.</li>
+        </ul>
       </p>
-    </div>
+      <p className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Note</strong> − The corner frequency is the frequency at which there is a change in the slope of the magnitude plot.</p>
+    <div className={`my-4`}/>
+      <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Example of bode plot</h4>
+      <img src={bodeplot} className="d-block mx-auto" width={`650px`} alt="..."/>
+      <div className={`card-body align="center"`}>
+        <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Example of bode plot</p>
+      </div>
+
+
+    <div className={`my-lg-5`}/>
     <iframe title={`rootlocus`} src="https://lpsa.swarthmore.edu/Bode/bodeDraw.html?c=6&num=s&den=s^2%2B2s%2B100" width="100%" height="650px"
             frameBorder="0">Root Locus</iframe>
+    </div>
       </>
 
 )

@@ -31,7 +31,7 @@ function Exp5A(props) {
                 <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Basically, according to the required output, an input is provided to the controller of the system. Depending on the achieved input, the controller generates the control signal which is fed to the processing unit. Thus according to the control signal, proper processing is performed and output is achieved.</p>
                 <p className={`text-${props.mode==="dark"?"light":"dark"}`}>But as there is no feedback path present in the system, thus whether the achieved output is desired or not the input has nothing to do with it.</p>
                 <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Examples: Traffic light Controller and Washing machine</p>
-                  <img src={olcs} width={`850px`} alt={`...`}/>
+                  <img src={olcs} className={`img-fluid`} width={`850px`} alt={`...`}/>
                   <figcaption className={`text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Open Loop control system</figcaption>
 
               </div>

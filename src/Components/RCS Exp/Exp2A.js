@@ -1,4 +1,7 @@
 import React from 'react'
+import {MathComponent} from "mathjax-react";
+import Laplace from '../Laplace.png';
+
 
 function Exp2A(props) {
   return (
@@ -13,15 +16,24 @@ function Exp2A(props) {
               <a className={`nav-link text-${props.mode==="light"?"dark":"light"}`} href="#item-1">Laplace TransForm</a>
               <nav class="nav nav-pills flex-column">
                 <a className={`nav-link ms-3 my-1 text-${props.mode==="light"?"dark":"light"}`} href="#item-1-1">Formula</a>
-                <a className={`nav-link ms-3 my-1 text-${props.mode==="light"?"dark":"light"}`} href="#item-1-2">Item 1-2</a>
+                {/*<a className={`nav-link ms-3 my-1 text-${props.mode==="light"?"dark":"light"}`} href="#item-1-2">Item 1-2</a>*/}
               </nav>
               <a className={`nav-link text-${props.mode==="light"?"dark":"light"}`} href="#item-3">Inverse Laplace TransForm</a>
               <nav class="nav nav-pills flex-column">
                 <a className={`nav-link ms-3 my-1 text-${props.mode==="light"?"dark":"light"}`} href="#item-3-1">Formula</a>
-                <a className={`nav-link ms-3 my-1 text-${props.mode==="light"?"dark":"light"}`} href="#item-3-2">Item 3-2</a>
+                {/*<a className={`nav-link ms-3 my-1 text-${props.mode==="light"?"dark":"light"}`} href="#item-3-2">Item 3-2</a>*/}
               </nav>
+
+              <a className={`nav-link text-${props.mode==="light"?"dark":"light"}`} href="#item-5">General formulae</a>
+
               <a className={`nav-link text-${props.mode==="light"?"dark":"light"}`} href="#item-4">Applications</a>
-            </nav>
+
+
+
+
+
+        </nav>
+
           </nav>
         </div>
 
@@ -34,25 +46,32 @@ function Exp2A(props) {
             </div>
             <div id="item-1-1">
               <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Formula </h5>
-              <p className={`text-${props.mode==="dark"?"light":"dark"}`}>.</p>
+              <p className={`text-${props.mode==="dark"?"light":"dark"}`}><MathComponent tex={String.raw` F(s) =  \int_{0}^{\infty} f(t)\,e^{-st}\,dx `} /> </p>
             </div>
-            <div id="item-1-2">
-              <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Item 1-2</h5>
-              <p className={`text-${props.mode==="dark"?"light":"dark"}`}>...</p>
-            </div>
+            {/*<div id="item-1-2">*/}
+            {/*  <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Item 1-2</h5>*/}
+            {/*  <p className={`text-${props.mode==="dark"?"light":"dark"}`}>...</p>*/}
+
+            {/*</div>*/}
             <div id="item-3">
               <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Inverse Laplace TransForm</h4>
               <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Two integrable functions have the same Laplace transform only if they differ on a set of Lebesgue measure zero. This means that, on the range of the transform, there is an inverse transform. In fact, besides integrable functions, the Laplace transform is a one-to-one mapping from one function space into another in many other function spaces as well, although there is usually no easy characterization of the range.
-
-Typical function spaces in which this is true include the spaces of bounded continuous functions, the space L∞(0, ∞), or more generally tempered distributions on (0, ∞). The Laplace transform is also defined and injective for suitable spaces of tempered distributions.</p>
+                  Typical function spaces in which this is true include the spaces of bounded continuous functions, the space L∞(0, ∞), or more generally tempered distributions on (0, ∞). The Laplace transform is also defined and injective for suitable spaces of tempered distributions.</p>
             </div>
             <div id="item-3-1">
               <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Formula</h5>
-              <p className={`text-${props.mode==="dark"?"light":"dark"}`}>...</p>
+              <p className={`text-${props.mode==="dark"?"light":"dark"}`}><MathComponent tex={String.raw` f(t) = L^{-1}{[F(s)]}`}/> </p>
             </div>
-            <div id="item-3-2">
-              <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Item 3-2</h5>
-              <p className={`text-${props.mode==="dark"?"light":"dark"}`}>...</p>
+            <div className={`my-5`} id="item-5">
+              {/*<h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Item 3-2</h5>*/}
+
+              {/*<p className={`text-${props.mode==="dark"?"light":"dark"}`}>...</p>*/}
+
+              <img src={Laplace} width={`850px`} alt={`...`}/>
+
+              <div className={`card-body align="center"`}>
+                <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Table: General Laplace and time domain functions</p>
+              </div>
             </div>
             <div id="item-4">
               <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Applications</h4>
@@ -60,11 +79,11 @@ Typical function spaces in which this is true include the spaces of bounded cont
               Performing this calculation in Laplace space turns the convolution into a multiplication; the latter being easier to solve because of its algebraic form.The Laplace transform is invertible on a large class of functions. Given a simple mathematical or functional description of an input or output to a system, the Laplace transform provides an alternative functional description that often simplifies the process of analyzing the behavior of the system, or in synthesizing a new system based on a set of specifications.
               The Laplace transform can also be used to solve differential equations and is used extensively in mechanical engineering and electrical engineering. The Laplace transform reduces a linear differential equation to an algebraic equation, which can then be solved by the formal rules of algebra.</p>
             </div>
-            <div id="item-4-1">
-              <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Impulse responce</h5>
-              <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Consider a linear time-invariant system with transfer function.
-              The impulse response is simply the inverse Laplace transform of this transfer function:</p>
-            </div>
+            {/*<div id="item-4-1">*/}
+            {/*  <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Impulse responce</h5>*/}
+            {/*  <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Consider a linear time-invariant system with transfer function.*/}
+            {/*  The impulse response is simply the inverse Laplace transform of this transfer function:</p>*/}
+            {/*</div>*/}
           </div>
         </div>
       </div>

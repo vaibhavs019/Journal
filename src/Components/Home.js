@@ -14,9 +14,9 @@ export default function Home(props) {
       <div className={`heading-1  text-${props.mode==="light"?"dark":"light"}`}><h1><strong>Subjects</strong></h1></div>
 
         <ul className="list-group list-group-flush">
-            <Link className={`list-group-item bg-${props.mode} text-${props.mode==="light"?"dark":"light"}`} to="/kdr">Kinematic and Dynamic for Robots <span className={`badge bg-danger rounded-pill`}>In progress</span> </Link>
+            <Link className={`list-group-item bg-${props.mode} text-${props.mode==="light"?"dark":"light"}`} to="/kdr">Kinematic and Dynamic for Robots </Link>
 
-            <Link className={`list-group-item bg-${props.mode} text-${props.mode==="light"?"dark":"light"}`} to="/rcs">Robotic Control System <span className={`badge bg-danger rounded-pill`}>In progress</span></Link>
+            <Link className={`list-group-item bg-${props.mode} text-${props.mode==="light"?"dark":"light"}`} to="/rcs">Robotic Control System </Link>
         </ul>
         </div>
       </>

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-roboto: "Roboto Slab", serif;
+    --font-raleway: "Raleway", sans-serif;
+}
+
+.app {
+    padding: 4rem;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+

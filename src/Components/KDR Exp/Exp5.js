@@ -5,6 +5,7 @@ import exp13 from "../exp13.png";
 import exp14 from "../exp14.jpg";
 import exp15 from "../exp15.jpg";
 import Cartesian from "../Cartesian.gif";
+// import "./Exp5.css"
 
 
 

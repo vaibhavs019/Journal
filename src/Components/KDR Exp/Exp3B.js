@@ -4,6 +4,7 @@ import exp_3_2_2 from "../exp_3_2_2.png"
 import exp_3_2_3 from "../exp_3_2_3.png"
 import exp_3_2_4 from "../exp_3_2_4.png"
 import Exp_3_2 from "../Exp_3_2.mp4";
+// import "./Exp3B.css"
 
 
 export default function Exp3b(props) {
@@ -71,16 +72,16 @@ export default function Exp3b(props) {
                 <div className='continer my-5' />
                 <h5><strong className={`text-${props.mode==="dark"?"light":"dark"}`}>Procedure</strong></h5>
                 <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-                    <ul><li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                    <ul><li className={`text-${props.mode==="dark"?"light":"dark"}`}>Open CoppeliaSim: Launch CoppeliaSim and create a new scene.</li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Create the crane arm: Use the object library to select and place the required components to create the crane arm. You will need a base, an arm, a boom, and a hook.</li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}> Add the electromagnet: Add an electromagnet to the end of the hook. You can use a cube shape and adjust its size and position as per your requirements. To make the electromagnet functional, you will need to add a proximity sensor and a script.</li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}> Add the proximity sensor: Add a proximity sensor to the electromagnet. This sensor will detect if there are any metallic objects nearby. Adjust the sensor's position and orientation so that it is close to the electromagnet.</li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Write the control program: Write a control program using Lua script that will activate the electromagnet when a metallic object is detected.</li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Test and debug: Run the simulation to test the crane's movement and check if the electromagnet is working correctly. If there are any errors, use the debugging tools available in CoppeliaSim to troubleshoot the issue.</li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Fine-tune the crane: Adjust the arm and boom's movements and the electromagnet's sensitivity to optimize the crane's performance.</li>
+                        <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Save and export: Once you are satisfied with the crane's performance, save the simulation and export the code for the control program to use it on a physical robot.</li>
+                        {/*<li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>*/}
+                        {/*<li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>*/}
                     </ul>
 
                 </p>

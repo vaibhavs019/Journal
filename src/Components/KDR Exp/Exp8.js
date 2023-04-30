@@ -8,6 +8,7 @@ import exp46 from "../exp46.jpg"
 import exp47 from "../exp47.jpg"
 import exp48 from "../exp48.jpg"
 import exp49 from "../exp49.jpg"
+// import "./Exp8.css"
 
 export default function Exp8K(props) {
   return (

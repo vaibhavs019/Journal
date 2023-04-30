@@ -4,6 +4,7 @@ import exp_3_1_1 from "../exp_3_1_1.png"
 import exp_3_1_2 from "../exp_3_1_2.png"
 import exp_3_1_3 from "../exp_3_1_3.png"
 import { saveAs } from 'file-saver';
+// import "./Exp3A.css"
 
 
 

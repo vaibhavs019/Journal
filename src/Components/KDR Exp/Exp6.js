@@ -2,6 +2,7 @@ import React from 'react'
 import exp21 from "../exp21.jpg"
 import exp22 from "../exp22.jpg"
 import exp23 from "../exp23.png"
+// import "./Exp6.css"
 export default function Exp6K(props) {
   return (
     <div>

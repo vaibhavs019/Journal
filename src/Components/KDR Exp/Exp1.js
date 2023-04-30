@@ -3,6 +3,7 @@ import React from 'react'
 import Cartesian from "../Cartesian.gif"
 import Cylindrical from "../Cylindrical.png"
 import Polar from "../Polar.png"
+// import "./Exp1.css"
 
 export default function Exp1(props) {
   return (
@@ -15,7 +16,7 @@ export default function Exp1(props) {
         <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Aim: To study basic robot co-ordinate configurations.</strong></h3>
         <div className='container my-5'/>
         <h4 className={` text-${props.mode==="dark"?"light":"dark"}`}><strong>Introduction</strong></h4>
-        <p className={`my-0 text-${props.mode==="dark"?"light":"dark"}`}><h5><strong>Industrial Robots DeFinition:</strong></h5>
+        <p className={`my-0 text-${props.mode==="dark"?"light":"dark"}`}><h5><strong>Industrial Robots Definition:</strong></h5>
               A robot is a programmable arm simulator.
               “A robot is a re-programmable, multifunction manipulator designed to move material,
               parts, tools, or special devices through variable programmed motions for the

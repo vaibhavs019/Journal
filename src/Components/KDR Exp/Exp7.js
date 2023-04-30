@@ -5,6 +5,7 @@ import exp33 from "../exp33.jpg"
 import exp34 from "../exp34.jpg"
 import exp35 from "../exp35.jpg"
 import exp36 from "../exp36.jpg"
+// import "./Exp7css"
 
 
 

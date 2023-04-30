@@ -1,6 +1,7 @@
 import React from 'react'
 import SCARA from "../SCARA.png"
 import Aritculated from "../Articulated.webp"
+// import "./Exp2.css"
 
 export default function Exp2(props) {
   return (

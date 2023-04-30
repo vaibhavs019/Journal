@@ -3,6 +3,7 @@ import ss_4_2_1 from "../ss_4_2_1.png";
 import ss_4_2_2 from "../ss_4_2_2.png";
 import ss_4_2_3 from "../ss_4_2_3.png";
 import Exp_4 from "../Exp_4.MOV";
+// import "./Exp4A.css"
 
 
 export default function Exp4a(props) {
@@ -66,18 +67,20 @@ export default function Exp4a(props) {
                 <div className='continer my-4' />
             <h5><strong className={`text-${props.mode==="dark"?"light":"dark"}`}>Procedure</strong></h5>
             <p className={`text-${props.mode==="dark"?"light":"dark"}`}>
-                <ul><li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
-                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>
+                <ul><li className={`text-${props.mode==="dark"?"light":"dark"}`}>Create a new scene in CoppeliaSim: Open CoppeliaSim and create a new scene by selecting "File" > "New Scene" from the main menu.</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Add a robot model: To add a robot model, select "Model" > "Add Model" from the main menu. Choose a robot model that you want to use for your wall follower robot. You can also create your own robot model if you have the necessary skills.</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Add sensors to the robot: To make the line follower robot, add the line sensor module at the bottom of the robot, facing down. The line sensor module should be able to detect the desired colored line that the robot will follow.</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Program the robot: Use the CoppeliaSim API to write the control program for your robot. To make the robot follow the line, the program should read the sensor data and adjust the robot's movement to follow the line.</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Test and refine the robot: Test the robot to see how it performs. If it's not following the line/wall properly, adjust the programming or the sensor placement until you get the desired result.</li>
+                    <li className={`text-${props.mode==="dark"?"light":"dark"}`}>Save and export the scene: Once you're satisfied with the robot's performance, save the scene by selecting "File" > "Save Scene As" from the main menu. You can also export the scene as a standalone executable file that can be run on other computers.</li>
+                    {/*<li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>*/}
+                    {/*<li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>*/}
+                    {/*<li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>*/}
+                    {/*<li className={`text-${props.mode==="dark"?"light":"dark"}`}></li>*/}
                 </ul>
             </p>
+
+
                 <div className={`youtube tutorial my-4`}>
                     <iframe width="100%" height="650px" src="https://www.youtube.com/embed/ugHmacZhR0I"
                             title="YouTube video player" frameBorder="0"

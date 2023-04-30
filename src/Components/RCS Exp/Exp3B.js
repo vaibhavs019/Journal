@@ -6,7 +6,7 @@ function Exp3B(props) {
   return (
     <div>
       <h2 className={`text-${props.mode==="dark"?"light":"dark"}`}>Experiment-3B</h2>
-      <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}>Time domain analysis oF an electric circuit(Mechanical circuit)</h3>
+      <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}>Time domain analysis of an electric circuit(Mechanical circuit)</h3>
 
         <div className={`my-5`}/>
         <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Mass spring damper</h4>
@@ -36,9 +36,9 @@ function Exp3B(props) {
         <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Transfer function</h5>
         <p className={`text-${props.mode==="dark"?"light":"dark"}`}><MathComponent tex={String.raw`G(s) = \frac{R(s)}{C(s)} = \frac{1}{Ms^2 + Bs + k}`}/> </p>
 
-      <div className={`my-4`} />
-      <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Example of Mass Spring Damper system</h5>
-      <p className={`text-${props.mode==="dark"?"light":"dark"}`}> </p>
+      {/*<div className={`my-4`} />*/}
+      {/*<h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Example of Mass Spring Damper system</h5>*/}
+      {/*<p className={`text-${props.mode==="dark"?"light":"dark"}`}> </p>*/}
     </div>
   )
 }

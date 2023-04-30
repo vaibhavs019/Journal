@@ -1,62 +1,82 @@
 import React from 'react'
-import {MathComponent} from "mathjax-react";
-import PI from "../PI.png";
-import PD from "../PD.png";
-import PID from "../PID.png";
+import MPC from "../MPC.png";
 
 export default function Exp7(props) {
   return (
     <div>
         <h2 className={`text-${props.mode==="dark"?"light":"dark"}`}>Experiment-7</h2>
-        <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}>Auto PID controller tuning using Simulink software</h3>
-        <div className='container my-5'/>
-        <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>What is PID</h4>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Proportional-Integral-Derivative (PID) control is the most common control algorithm used in industry and has been universally accepted in industrial control. The popularity of PID controllers can be attributed partly to their robust performance in a wide range of operating conditions and partly to their functional simplicity, which allows engineers to operate them in a simple, straightforward manner.</p>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>As the name suggests, PID algorithm consists of three basic coefficients; proportional, integral and derivative which are varied to get optimal response.
-        </p>
+        <div className='container my-4'/>
+        <h3 className={`text-${props.mode==="dark"?"light":"dark"}`}>To understand the basic of Model Predictive Controller(MPC)</h3>
+        <div className='container my-4'/>
+        <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>What is MPC?</h4>
+        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>Model Predictive Control (MPC), also known as Dynamical Matrix Control (DMC), Generalized Predictive Control (GPC), Receding Horizon Control (RHC). </p>
+        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>The basic idea behind MPC is to use a mathematical model of the system being controlled to predict its behaviour over a specified time horizon. Based on these predictions, the controller determines the optimal control inputs that will minimize a certain objective function, such as the error between the desired and actual system behaviour.</p>
+        <img src={MPC} className="d-block mx-auto" width={`450px`} alt="..."/>
+        <div className={`card-body align="center"`}>
+            <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Block diagram of MPC</p>
+        </div>
+        <div className={`my-3`} />
+        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>MPC controllers are particularly useful in systems with complex dynamics, multiple inputs and outputs, and constraints on the control inputs and outputs. By taking into account the system's constraints and predicting its future behaviour, MPC controllers can achieve better performance than traditional PID (proportional-integral-derivative) controllers.</p>
+        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>To implement an MPC controller, the following steps are typically involved:
+        <ol>
+            <li>Develop a mathematical model of the system being controlled.</li>
+            <li>Define the performance objectives and constraints on the system.</li>
+            <li>Use the model to predict the future behaviour of the system over a specified time horizon.</li>
+            <li>Determine the optimal control inputs that minimize the objective function, subject to the constraints.</li>
+            <li>Implement the control inputs and update the predictions based on the actual system behaviour.</li>
+            <li>Repeat steps 3-5 in a closed-loop fashion to continuously update the control inputs.</li>
+        </ol></p>
 
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Proportional Response</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>The proportional component depends only on the difference between the set point and the process variable. This difference is referred to as the Error term. The proportional gain (Kc) determines the ratio of output response to the error signal. For instance, if the error term has a magnitude of 10, a proportional gain of 5 would produce a proportional response of 50. In general, increasing the proportional gain will increase the speed of the control system response. However, if the proportional gain is too large, the process variable will begin to oscillate. If Kc is increased further, the oscillations will become larger and the system will become unstable and may even oscillate out of control.
-            <MathComponent tex={String.raw`P_{out} = K_p e(t)`}/></p>
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Integral Response</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>The integral component sums the error term over time. The result is that even a small error term will cause the integral component to increase slowly. The integral response will continually increase over time unless the error is zero, so the effect is to drive the Steady-State error to zero. Steady-State error is the final difference between the process variable and set point. A phenomenon called integral windup results when integral action saturates a controller without the controller driving the error signal toward zero.
-            <MathComponent tex={String.raw`I_{out} = K_i \int_{0}^{t} e(t) dt`}/></p>
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Derivative Response</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>The derivative component causes the output to decrease if the process variable is increasing rapidly. The derivative response is proportional to the rate of change of the process variable. Increasing the derivative time (Td) parameter will cause the control system to react more strongly to changes in the error term and will increase the speed of the overall control system response. Most practical control systems use very small derivative time (Td), because the Derivative Response is highly sensitive to noise in the process variable signal. If the sensor feedback signal is noisy or if the control loop rate is too slow, the derivative response can make the control system unstable.
-            <MathComponent tex={String.raw`D_{out} = \frac {d} {dt}e(t)`}/></p>
-
-        <h5 className={`my-3 text-${props.mode==="dark"?"light":"dark"}`}>Different types of PID</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>PI, ID, and PD controllers are variations of the basic PID controller, which is a widely used feedback control mechanism in industrial processes.
+        <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Advantages of MPC</h4>
+        <p className={`text-${props.mode==="dark"?"light":"dark"}`}><ol>
+            <li>Straightforward formulation, based on well understood concepts </li>
+            <li>Explicitly handles constraints</li>
+            <li>Explicit use of a model</li>
+            <li>Well understood tuning parameters
             <ul>
-                <li><strong>PI controller</strong>The PI controller is a type of PID controller that only uses proportional and integral terms. It does not use the derivative term, which means it is less sensitive to noise and can provide smoother control action. The PI controller is commonly used in systems with slow dynamics and where overshooting is not desirable.
-                    <MathComponent tex={String.raw`m(t) = K_p e(t) + K_i \int_{0}^{t} e(t) dt`} />
-                    <img src={PI} className={`d-block mx-auto`} width={`800px`} alt={`...`}/>
-                    <figcaption className={`text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Working of PI controller</figcaption></li>
-                <div className={`my-3`}/>
+                <li>Prediction horizon</li>
+                <li>Optimization problem setup</li>
+            </ul></li>
+            <li>Development time much shorter than for competing advanced control methods</li>
+            <li>Easier to maintain: changing model or specs does not require complete redesign, sometimes can be done on the fly</li>
+        </ol></p>
 
-                <li><strong>PD controller</strong>The PD controller is a type of PID controller that only uses the proportional and derivative terms. It does not use the integral term, which means it can respond faster to changes in the system and can reduce overshooting. The PD controller is commonly used in systems with fast dynamics and where steady-state errors are not a concern.
-                    <MathComponent tex={String.raw `m(t) = K_p e(t) + K_d \frac{d}{dt} e(t)`}/>
-                    <img src={PD} className={`d-block mx-auto`} width={`800px`} alt={`...`}/>
-                    <figcaption className={`text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Working of PD controller</figcaption></li>
-                <div className={`my-3`}/>
-                <li><strong>PID controller</strong>A PID (Proportional-Integral-Derivative) controller is a type of feedback control mechanism widely used in industrial processes to control systems in a desired way. The PID controller calculates an error signal by subtracting the desired output from the actual output of the system and applies a corrective action to reduce the error. Proportional, integral and derivative all three terms are combined to calculate the PID output, which is applied as a control signal to the system. The gains of each term are adjusted to achieve the desired control performance.
-                    <MathComponent tex={String.raw `u(t) = K_p e(t) + K_i \int e(t) dt + K_d \frac{d}{dt}e(t)`}/>
-                    <img src={PID} className={`d-block mx-auto`} width={`800px`} alt={`...`}/>
-                    <figcaption className={`text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Working of PID controller</figcaption></li>
-            </ul></p>
+        <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Emerging applications of MPC</h4>
+            <p className={`text-${props.mode==="dark"?"light":"dark"}`}><ol>
+                <li>Nonlinear MPC
+                    <ul>
+                        <li>just need a computable model (simulation)</li>
+                        <li>NLP optimization</li>
+                    </ul></li>
+                <li>Hybrid MPC <ul>
+                    <li>discrete and parametric variables</li>
+                    <li>combination of dynamics and discrete mode change</li>
+                    <li>mixed-integer optimization (MILP, MIQP)</li>
+                </ul></li>
+                <li>Engine control</li>
 
-
-        <h5 className={`text-${props.mode==="dark"?"light":"dark"}`}>Auto tuning of PID</h5>
-        <p className={`text-${props.mode==="dark"?"light":"dark"}`}>The process of setting the optimal gains for P, I and D to get an ideal response from a control system is called tuning. There are several methods for auto tuning the PID controllers, including  Ziegler-Nichols method, relay feedback, and model based method.
-            <ul>
-
-                <li><strong>Ziegler-Nichols method: </strong>This method is a heuristic method that uses step-response tests to determine the optimal controller gains. The method involves increasing the proportional gain until the system oscillates, and then applying a formula to determine the optimal gains.</li>
-                <li><strong>Relay feedback method</strong>This method involves applying a relay input to the system and measuring the response to determine the ultimate gain and ultimate period. The gains are then adjusted using a formula based on the ultimate gain and ultimate period.</li>
-                <li><strong>Model based method</strong>These methods use mathematical models of the system to determine the optimal controller gains. The model-based methods include the pole-placement method, the optimal control method, and the robust control method.</li>
-
-            </ul></p>
+                <li>Large scale operation control problems
+                    <ul>
+                        <li>Operations management (control of supply chain)</li>
+                        <li>Campaign control</li>
+                    </ul></li>
+                <li>Vehicle path planning and control
+                    <ul>
+                        <li>nonlinear vehicle models</li>
+                        <li>world models</li>
+                        <li>receding horizon preview</li>
+                    </ul></li>
+                <li>Spacecraft rendezvous with space station
+                    <ul>
+                        <li>visibility cone constraint</li>
+                        <li>fuel optimality</li>
+                    </ul></li>
+                <li>Underwater vehicle guidance</li>
+                <li>Missile guidance</li>
+            </ol></p>
     </div>
   )
 }
+
+// <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>
+// <p className={`text-${props.mode==="dark"?"light":"dark"}`}></p>

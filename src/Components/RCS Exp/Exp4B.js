@@ -1,6 +1,6 @@
 import React from 'react'
 import {MathComponent} from "mathjax-react";
-import bodeplot from "../bodeplot.png";
+//  
 
 function Exp4B(props) {
   return (
@@ -43,11 +43,11 @@ function Exp4B(props) {
       </p>
       <p className={`text-${props.mode==="dark"?"light":"dark"}`}><strong>Note</strong> − The corner frequency is the frequency at which there is a change in the slope of the magnitude plot.</p>
     <div className={`my-4`}/>
-      <h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Example of bode plot</h4>
-      <img src={bodeplot} className="d-block mx-auto" width={`650px`} alt="..."/>
-      <div className={`card-body align="center"`}>
-        <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Example of bode plot</p>
-      </div>
+      {/*<h4 className={`text-${props.mode==="dark"?"light":"dark"}`}>Example of bode plot</h4>*/}
+      {/*<img src={bodeplot} className="d-block mx-auto" width={`650px`} alt="..."/>*/}
+      {/*<div className={`card-body align="center"`}>*/}
+      {/*  <p className={`card-text text-${props.mode==="dark"?"light":"dark"}`} align={`center`}>Fig: Example of bode plot</p>*/}
+      {/*</div>*/}
 
 
     <div className={`my-lg-5`}/>
